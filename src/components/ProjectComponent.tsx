@@ -1,11 +1,13 @@
 import { SkillTag } from "./SkillTag";
 
 
-export function ProjectComponent({project}) {
+export function ProjectComponent({project}: {project: Project}) {
 
-    const skillArray = project.skills.map((skill) => {
+    const skillArray = project.skills.map((skill: string) => {
         return(
-            <SkillTag skill={skill} />
+            <div key={skill}>
+                <SkillTag skill={skill} />
+            </div>
         );
     })
 
@@ -17,7 +19,7 @@ export function ProjectComponent({project}) {
                     <p className="text-3xl font-bold align-middle">{project.title}:</p>
                     <p className="text-xl font-bold ml-2 content-center mt-1">{project.subtitle}</p>
                 </div>
-                <p className="text-lg text-left ml-3 w-11/12 mt-2 font-semibold">{project.description}</p>
+                <p className="text-lg text-left ml-3 w-11/12 mt-2 leading-snug font-semibold">{project.description}</p>
                 <div className="flex items-end h-full mb-2 ml-3 space-x-2">
                     {skillArray}
                 </div>

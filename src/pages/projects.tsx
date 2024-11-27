@@ -7,21 +7,25 @@ const projects = [
         subtitle: 'Specialty Coffee. Simplified.',
         src: '/multibrewicon.png',
         description: 'Created a web/mobile app that helps brew specialty coffee. The primary focus was on ease-of-use and simple design.',
-        skills: ['React Native', 'SvelteKit', 'SQLite']
+        skills: ['React Native', 'SvelteKit', 'SQLite'],
+        alt: 'Multibrew Icon'
     },
     {
         title: 'HotswapAI',
         subtitle: 'AI Without Subscription Fees',
         src: '/HotswapAI.png',
         description: 'Created a web app that allows users to bring their own API keys to chat with LLMs from multiple providers. In doing so, users get to use their favorite LLMs on a pay-as-you-go pricing model.',
-        skills: ['NextJS', 'PostgreSQL', 'Docker', 'Azure Key Valut']
+        skills: ['NextJS', 'PostgreSQL', 'Docker', 'Azure Key Valut'],
+        alt: 'HotswapAI Icon'
     }
 ]
 
 export default function Projects() {
     const projectList = projects.map((project) => {
         return (
-            <ProjectComponent project={project} />
+            <div key={project.title}>
+                <ProjectComponent project={project} />
+            </div>
         )
     })
     return (

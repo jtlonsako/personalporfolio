@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import type { AppProps } from "next/app";
+// import type { AppProps } from "next/app";
 import { AnimatePresence, motion } from "motion/react";
 import { useRouter } from "next/router";
 import Layout from "@/components/Layout";
