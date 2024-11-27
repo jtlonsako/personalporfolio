@@ -10,8 +10,8 @@ export function ProjectComponent({project}) {
     })
 
     return (
-        <div className="h-48 w-full my-5 flex rounded-lg border-2 border-black">
-            <img src={project.src} alt={project.alt} />
+        <div className="h-48 w-full my-5 flex rounded-lg border-2 border-black overflow-hidden">
+            <img className="object-cover" src={project.src} alt={project.alt} />
             <div className="flex flex-col">
                 <div className="flex ml-3 h-fit mt-2">
                     <p className="text-3xl font-bold align-middle">{project.title}:</p>
