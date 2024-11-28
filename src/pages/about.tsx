@@ -19,7 +19,7 @@ export default function About() {
                 experience building greenfield apps with React, SvelteKit, and Java.
             </p>
             <p className="text-left text-lg">
-                Through my +2 years of experience, I have grown both a love and deep
+                Through my 2+ years of experience, I have grown both a love and deep
                 respect for developing tools that solve people’s problems. Trial and error 
                 has taught me that I can actually build anything if I put my mind to it, and 
                 the beauty of the internet is that I get the opportunity to distribute my 
@@ -27,9 +27,8 @@ export default function About() {
                 to say that the problems I worked on made people’s lives better, even if just by a little bit.
             </p>
             <p className="text-left text-lg">
-                Aside from the career stuff, I like to (badly) play music, watch movies, spend
-                time with friends and family, and I’m trying to get to know Jesus. Any tips on
-                that last one are greatly welcome :)
+                Aside from the career stuff, I like to play music (badly), watch movies, spend
+                time with friends and family, and spending time with Jesus.
             </p>
         </div>
       </div>
