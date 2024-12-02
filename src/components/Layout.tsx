@@ -52,7 +52,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <header className={inter.className}>
         <nav className="flex justify-between items-center md:mr-12 text-2xl font-bold mt-4 px-4 md:px-0">
           {/* Logo */}
-          <div className="ml-3">JL</div>
+          <Link href="/" className="ml-3 text-black hover:no-underline">
+            JL
+          </Link>
 
           {/* Hamburger Menu for Mobile */}
           <div className="md:hidden">
@@ -97,16 +99,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
         {/* Sidebar for Mobile */}
         <div
-          className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform ${
-            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform ${
+            isSidebarOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 ease-in-out z-50`}
         >
           <div className="flex justify-between items-center p-4 border-b">
-            <div className="text-2xl font-bold">JL</div>
             <button
               onClick={toggleSidebar}
               className="text-black focus:outline-none"
             >
+
               {/* Close Icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -123,6 +125,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 />
               </svg>
             </button>
+            <div className="text-2xl font-bold">JL</div>
           </div>
           <div className="flex flex-col space-y-6 mt-6 px-4">
             <Link
