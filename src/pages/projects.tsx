@@ -29,9 +29,9 @@ export default function Projects() {
         )
     })
     return (
-        <div className="grid">
-            <p className="text-3xl font-bold">Projects</p>
-            <div className="justify-self-center w-4/6">
+        <div className="grid -mt-5">
+            <p className="flex justify-center text-3xl font-bold">Projects</p>
+            <div className="justify-self-center w-5/6 md:w-4/6">
                 {projectList}
             </div>
         </div>

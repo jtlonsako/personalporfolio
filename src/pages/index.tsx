@@ -15,7 +15,7 @@ import HeroPage from "@/components/HeroPage";
 
 export default function Home() {
   return (
-    <div style={{ padding: '4rem', textAlign: 'center' }}>
+    <div style={{ paddingLeft: '2rem', paddingRight: '2rem', textAlign: 'center' }}>
       <HeroPage />
     </div>
   );

@@ -4,8 +4,8 @@
 export default function About() {
     return (
       <div className="w-full justify-center flex">
-        <div className="grid justify-around w-5/12 space-y-5 -mt-4">
-            <p className="text-xl font-semibold">Hi!    👋</p>
+        <div className="grid md:justify-around w-9/12 md:w-5/12 space-y-5 -mt-4">
+            <p className="text-xl font-semibold flex justify-center">Hi!    👋</p>
             <p className="text-left text-lg">
                 I’m Josh. I am 25, was born and raised in Phoenix AZ, went to ASU for a 
                 BSE in Computer Systems Engineering, and have been a professional 
