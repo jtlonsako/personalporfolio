@@ -9,7 +9,7 @@ export default function About() {
             <p className="text-left text-lg">
                 I’m Josh. I am 25, was born and raised in Phoenix AZ, went to ASU for a 
                 BSE in Computer Systems Engineering, and have been a professional 
-                web developer for ~2.5 years.
+                web developer for 3+ years.
             </p>
             <p className="text-left text-lg">
                 In that time I worked primarily in the .NET world, either developing 
