@@ -1,36 +1,5 @@
-// // components/Layout.tsx
-// import React from "react";
-// import Link from "next/link";
-// import { Inter } from "next/font/google";
-
-// type LayoutProps = {
-//   children: React.ReactNode;
-// };
-
-// const inter = Inter({ subsets: ['latin'] });
-
-// const Layout: React.FC<LayoutProps> = ({ children }) => {
-//   return (
-//     <div className="w-screen">
-//         <header className={inter.className}>
-//         <nav className="flex justify-between items-center md:mr-12 text-2xl font-bold mt-4">
-//         <div className="ml-3">JL</div>
-//         <div className="space-x-10">
-//             <Link className="text-black" href="/">Home</Link>
-//             <Link className="text-black" href="/about">About</Link>
-//             <Link className="text-black" href="/projects">Projects</Link>
-//             <Link className="text-black" href="/blog">Blog</Link>
-//         </div>
-//         </nav>
-//     </header>
-//     <main className="md:p-10 w-screen">{children}</main>
-//     </div>
-//   );
-// };
-
-// export default Layout;
-
 import React, { useState } from "react";
+import {useRouter} from 'next/router';
 import Link from "next/link";
 import { Inter } from "next/font/google";
 
@@ -46,6 +15,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  const router = useRouter();
 
   return (
     <div className="w-screen">
@@ -82,16 +53,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-10">
-            <Link className="text-black" href="/">
+            <Link className={`${router.pathname == '/' ? 'text-purple-700' : 'text-black'}`} href="/">
               Home
             </Link>
-            <Link className="text-black" href="/about">
+            <Link className={`${router.pathname == '/about' ? 'text-purple-700' : 'text-black'}`} href="/about">
               About
             </Link>
-            <Link className="text-black" href="/projects">
+            <Link className={`${router.pathname == '/projects' ? 'text-purple-700' : 'text-black'}`} href="/projects">
               Projects
             </Link>
-            <Link className="text-black" href="/blog">
+            <Link className={`${router.pathname == '/blog' ? 'text-purple-700' : 'text-black'}`} href="/blog">
               Blog
             </Link>
           </div>

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Inter } from 'next/font/google'
-import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] });
 export default function HeroPage() {
@@ -19,7 +18,7 @@ export default function HeroPage() {
         </div>
 
         <div className="place-content-center">
-            <Image src='/Frame2.png' alt='Image of me, Joshua Lonsako' width={400} height={400} />
+            <img src='/Frame2.png' alt='Image of me, Joshua Lonsako' width={400} height={400} />
         </div>
     </div>
   );
