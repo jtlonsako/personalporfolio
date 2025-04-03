@@ -8,7 +8,8 @@ const projects = [
         src: '/multibrewicon.png',
         description: 'Created a web/mobile app that helps brew specialty coffee. The primary focus was on ease-of-use and simple design.',
         skills: ['React Native', 'SvelteKit', 'SQLite'],
-        alt: 'Multibrew Icon'
+        alt: 'Multibrew Icon',
+        url: 'https://apps.apple.com/us/app/multibrew/id6499178775'
     },
     {
         title: 'HotswapAI',
@@ -16,16 +17,17 @@ const projects = [
         src: '/HotswapAI.png',
         description: 'Created a web app that allows users to bring their own API keys to chat with LLMs from multiple providers. In doing so, users get to use their favorite LLMs on a pay-as-you-go pricing model.',
         skills: ['NextJS', 'PostgreSQL', 'Docker', 'Azure Key Valut'],
-        alt: 'HotswapAI Icon'
+        alt: 'HotswapAI Icon',
+        url: 'https://hotswapai.com'
     }
 ]
 
 export default function Projects() {
     const projectList = projects.map((project) => {
         return (
-            <div key={project.title}>
+            <a key={project.title} target="_blank" href={project.url} className="no-underline text-black hover:no-underline">
                 <ProjectComponent project={project} />
-            </div>
+            </a>
         )
     })
     return (
